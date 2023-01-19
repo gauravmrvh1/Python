@@ -1,9 +1,9 @@
 import json
 
-""" x =  '{ "name":"John", "age":30, "city":"New York"}'
+x =  '{"name":"John", "age":30, "city":"New York"}'
 y = json.loads(x)
 print(y)
-print(y["age"]) """
+print(y["age"])
 
 
 
@@ -20,10 +20,18 @@ x = {
   ]
 }
 
-# print(x)
-# print(type(x))
+print(x)
+print(type(x))
 # print(json.dumps(x))
 # print(json.dumps(x, indent=4))
 # print( json.dumps(x, indent=4, separators=("... ", " = ")) )
 # print(json.dumps(x, indent=4, sort_keys=True))
 
+
+
+t = tuple((1,22,334,454))
+print(t)
+print(type(t))
+print(type(x))
+print(json.dumps(x))
+print(json.dumps(t))
