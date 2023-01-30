@@ -1,7 +1,11 @@
 import pymongo
 import json
+import MongoConnection as Conn
 
-myclient = pymongo.MongoClient('mongodb://localhost:27017/')
+myclient = Conn.myclient
+
+# myclient = pymongo.MongoClient('mongodb://localhost:27017/')
+
 
 mydb = myclient['mydatabase']
 

@@ -72,7 +72,7 @@ print(p1.age) """
 
 
 
-class Parent:
+""" class Parent:
   def __init__(self, txt):
     self.message = txt
 
@@ -85,31 +85,36 @@ class Child(Parent):
 
 x = Child("Hello, and welcome!")
 
-x.printmessage()
+x.printmessage() """
 
 ######################################################################################
 
-class MyClass:
+""" class MyClass:
   x = 10
   def __init__(self, *arg):
     self.arg1 = arg[0]
     self.arg2 = arg[1]
+    print(MyClass.x)
+    MyClass.x = 1000
   
   def response(self):
-    self.newProp = 'Gaurav Marvaha' # here we're adding new prop
+    # here we're adding new prop
+    MyClass.newProp = 'Gaurav Marvaha' 
+    self.newProp = 'Gaurav MARVAHA' 
     print(self.arg1)
     print(self.arg2)
   
 obj = MyClass(10,20)
-# print(obj.x)
+print(obj.x)
 obj.response()
 print(obj.newProp)
+print() """
 
 ########################################################################################
 
 
 
-class Person:
+""" class Person:
   def __init__(self, fname, lname):
     self.firstname = fname
     self.lastname = lname
@@ -126,37 +131,78 @@ class Student(Person):
     print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
 
 x = Student("Mike", "Olsen", 2019)
-x.welcome()
+x.welcome() """
+
+
+########################################################################################
+
+
+""" class Parent:
+   parentAttr = 100
+   def __init__(self):
+      print ("Calling parent constructor")
+
+   def parentMethod(self):
+      print ('Calling parent method')
+
+   def setAttr(self, attr):
+      Parent.parentAttr = attr
+
+   def getAttr(self):
+      print ("Parent attribute :", Parent.parentAttr)
+      
+class Child(Parent): # define child class
+   def __init__(self):
+      print ("Calling child constructor")
+
+   def childMethod(self):
+      print ('Calling child method')
+
+c = Child()          
+c.childMethod()
+c.parentMethod()
+c.setAttr(200)
+c.getAttr() """
 
 
 ########################################################################################
 
 
 
+class Vector:
+   def __init__(self, a, b):
+      self.a = a
+      self.b = b
+
+   def __str__(self):
+      return 'Vector (%d, %d)' % (self.a, self.b)
+   
+   def __add__(self,other):
+      return Vector(self.a + other.a, self.b + other.b)
+
+v1 = Vector(2,10)
+print(v1)
+v2 = Vector(5,-2)
+print(v2)
+print (v1 + v2)
 
 
 
+########################## DATA HIDING ##############################################################
 
 
+class JustCounter:
+  __secretCount = 0
+  
+  def count(self):
+    self.__secretCount += 1
+    print (self.__secretCount)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+counter = JustCounter()
+counter.count()
+counter.count()
+# print (counter.__secretCount)
+print(counter._JustCounter__secretCount)
 
 
 

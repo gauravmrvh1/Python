@@ -1,7 +1,7 @@
 
-import camelcase
+import camelcase1
 
-c = camelcase.CamelCase()
+c = camelcase1.CamelCase()
 
 txt = "hello world"
 

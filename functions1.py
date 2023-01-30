@@ -56,7 +56,7 @@ my_function(fruits) """
 
 
 
-def tri_recursion(k):
+""" def tri_recursion(k):
     if(k > 0):
         result = k + tri_recursion(k - 1)
         print(result)
@@ -66,4 +66,12 @@ def tri_recursion(k):
     return result
 
 print("\n\nRecursion Example Results")
-tri_recursion(6)
+tri_recursion(6) """
+
+
+
+sum = lambda arg1, arg2: arg1 + arg2
+
+# Now you can call sum as a function
+print ("Value of total : ", sum( 10, 20 ))
+print ("Value of total : ", sum( 20, 20 ))
