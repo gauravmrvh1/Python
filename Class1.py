@@ -131,6 +131,19 @@ class Student(Person):
     print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
 
 x = Student("Mike", "Olsen", 2019)
+
+print(hasattr(x, 'age'), hasattr(x, 'firstname'))
+
+setattr(x, 'lastname', 'Marwah')
+
+print(getattr(x, 'lastname'))
+
+delattr(x, 'lastname')
+
+print(x.firstname)
+
+print(x.lastname)
+
 x.welcome() """
 
 
@@ -179,19 +192,23 @@ class Vector:
    
    def __add__(self,other):
       return Vector(self.a + other.a, self.b + other.b)
+    
+   def __sub__(self,other):
+      return Vector(self.a - other.a, self.b - other.b)
 
 v1 = Vector(2,10)
-print(v1)
+# print(v1)
 v2 = Vector(5,-2)
-print(v2)
+# print(v2)
 print (v1 + v2)
+print (v1 - v2)
 
 
 
 ########################## DATA HIDING ##############################################################
 
 
-class JustCounter:
+""" class JustCounter:
   __secretCount = 0
   
   def count(self):
@@ -202,7 +219,7 @@ counter = JustCounter()
 counter.count()
 counter.count()
 # print (counter.__secretCount)
-print(counter._JustCounter__secretCount)
+print(counter._JustCounter__secretCount) """
 
 
 
